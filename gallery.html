@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shimren – Gallery</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="logo">✦ Shimren</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()"><i class="fas fa-bars"></i></div>
+  </nav>
+
+  <div class="page-hero">
+    <span class="section-tag">Our Work</span>
+    <h1>Beauty <span>Gallery</span></h1>
+    <p>A glimpse of our transformations and artistry</p>
+  </div>
+
+  <section class="section">
+    <div class="gallery-filters">
+      <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+      <button class="filter-btn" onclick="filterGallery('hair', this)">Hair</button>
+      <button class="filter-btn" onclick="filterGallery('makeup', this)">Makeup</button>
+      <button class="filter-btn" onclick="filterGallery('nails', this)">Nails</button>
+      <button class="filter-btn" onclick="filterGallery('skin', this)">Skin &amp; Spa</button>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item" data-cat="hair" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80" alt="Hair Styling" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Hair Styling</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="makeup" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&q=80" alt="Bridal Makeup" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Bridal Makeup</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="nails" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Nail Art" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Nail Art</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="skin" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80" alt="Facial Glow" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Facial Glow</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="skin" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Body Spa" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Body Spa</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="hair" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1560869713-7d0a29430803?w=600&q=80" alt="Hair Color" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Hair Color</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="nails" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Manicure" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Manicure</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="makeup" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=600&q=80" alt="Eye Makeup" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Eye Makeup</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="hair" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=600&q=80" alt="Hair Treatment" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Hair Treatment</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="skin" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Skin Care" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Skin Care</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="makeup" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=600&q=80" alt="Party Makeup" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Party Makeup</p></div>
+      </div>
+
+      <div class="gallery-item" data-cat="nails" onclick="openLightbox(this)">
+        <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=600&q=80" alt="Pedicure" loading="lazy"/>
+        <div class="gallery-overlay"><i class="fas fa-expand"></i><p>Pedicure</p></div>
+      </div>
+
+    </div>
+
+    <div class="page-cta">
+      <a href="testimonials.html" class="btn-primary">Read Testimonials <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lb-close" onclick="closeLightbox(event)"><i class="fas fa-times"></i></button>
+    <button class="lb-prev" onclick="changeImage(-1, event)"><i class="fas fa-chevron-left"></i></button>
+    <button class="lb-next" onclick="changeImage(1, event)"><i class="fas fa-chevron-right"></i></button>
+    <div class="lb-content" onclick="event.stopPropagation()">
+      <img id="lb-img" src="" alt=""/>
+      <p id="lb-caption"></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="logo">✦ Shimren</div>
+        <p>Your trusted beauty destination for premium treatments and unforgettable transformations.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <a href="services.html">Hair Styling</a>
+        <a href="services.html">Facial &amp; Skin</a>
+        <a href="services.html">Nail Art</a>
+        <a href="services.html">Bridal Makeup</a>
+        <a href="services.html">Body Spa</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shimren Beauty Parlour. All rights reserved. Made with <span>♥</span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
